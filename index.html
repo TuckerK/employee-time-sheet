@@ -2,102 +2,102 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- Reset CSS -->
-    <link rel="stylesheet" href="assets/css/reset.css">
+  <!-- Reset CSS -->
+  <link rel="stylesheet" href="assets/css/reset.css">
 
-    <!-- Bootstrap CDN bootswatch - Lux-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.2/lux/bootstrap.min.css">
+  <!-- Bootstrap CDN bootswatch - Lux-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.2/lux/bootstrap.min.css">
 
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 
-    <!-- Style Reference -->
-    <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Style Reference -->
+  <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Employee Data Management</title>
+  <title>Employee Data Management</title>
 </head>
 
 <body>
 
-    <!-- Main Container -->
-    <div class="container">
+  <!-- Main Container -->
+  <div class="container">
 
-        <!-- Header -->
-        <div class="row">
-            <div class="col-md-12">
-                <div class="jumbotron">
-                    <h1 class="text-info">Employee Data Management</h1>
-                    <br>
-                    <h3 class="text-danger">Comprehensive Directory of Employee Billable Hours</h3>
-                </div>
-            </div>
+    <!-- Header -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron">
+          <h1 class="text-info">Employee Data Management</h1>
+          <br>
+          <h3 class="text-danger">Comprehensive Directory of Employee Billable Hours</h3>
         </div>
-
-        <!-- Train Time Table -->
-        <div class="card border-info">
-            <div class="card-header text-light bg-info">Current Employees</div>
-            <div class="card-body">
-                <table class="table" id="employee-data">
-                    <thead class="table-active">
-                        <tr>
-                            <th>Employee Name</th>
-                            <th>Role</th>
-                            <th>Start Date</th>
-                            <th>Months Worked</th>
-                            <th>Monthly Rate</th>
-                            <th>Total Billed</th>
-                        </tr>
-                    </thead>
-                    <tbody id="table-body">
-                        
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <!-- form fields -->
-        <div class="card border-info">
-            <div class="card-header text-light bg-info">Add Employee</div>
-            <div class="card-body">
-                <form class="form-horizontal" id="trains-form">
-                    <div class="form-group">
-                        <label for="name-input">Employee Name</label>
-                        <input type="text" class="form-control" id="name-input" placeholder="Enter Employee Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="destination-input">Role</label>
-                        <input type="text" class="form-control" id="role-input" placeholder="Enter Role">
-                    </div>
-                    <div class="form-group">
-                        <label for="destination-input">Start Date</label>
-                        <input type="time" class="form-control" id="start-date-input" placeholder="Enter Start Date">
-                    </div>
-                    <div class="form-group">
-                        <label for="frequency-input">Monthly Rate</label>
-                        <input type="number" min="1" class="form-control" id="monthly-input" placeholder="Enter Monthly Rate">
-                    </div>
-                    <button type="submit" id="submit" class="btn btn-danger">Submit</button>
-                </form>
-            </div>
-        </div>
+      </div>
     </div>
 
-    <!-- Jquery JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Train Time Table -->
+    <div class="card border-info">
+      <div class="card-header text-light bg-info">Current Employees</div>
+      <div class="card-body">
+        <table class="table" id="employee-data">
+          <thead class="table-active">
+            <tr>
+              <th>Employee Name</th>
+              <th>Role</th>
+              <th>Start Date</th>
+              <th>Months Worked</th>
+              <th>Monthly Rate</th>
+              <th>Total Billed</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
 
-    <!-- JS File Reference -->
-    <script src="assets/javascript/script.js" type="text/javascript">
-    </script>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-        crossorigin="anonymous"></script>
+    <!-- form fields -->
+    <div class="card border-info">
+      <div class="card-header text-light bg-info">Add Employee</div>
+      <div class="card-body">
+        <form class="form-horizontal" id="employee-form">
+          <div class="form-group">
+            <label for="name-input">Employee Name</label>
+            <input type="text" class="form-control" id="name-input" placeholder="Enter Employee Name">
+          </div>
+          <div class="form-group">
+            <label for="role-input">Role</label>
+            <input type="text" class="form-control" id="role-input" placeholder="Enter Role">
+          </div>
+          <div class="form-group">
+            <label for="state-date-input">Start Date</label>
+            <input type="date" class="form-control" id="start-date-input" placeholder="Enter Start Date">
+          </div>
+          <div class="form-group">
+            <label for="monthly-input">Monthly Rate</label>
+            <input type="number" class="form-control" id="monthly-input" placeholder="Enter Monthly Rate">
+          </div>
+          <button type="submit" id="submit" class="btn btn-danger">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Jquery JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- JS File Reference -->
+  <script src="assets/javascript/script.js" type="text/javascript">
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+  crossorigin="anonymous"></script>
 </body>
 
 </html>
